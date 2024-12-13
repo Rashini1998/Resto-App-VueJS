@@ -27,6 +27,7 @@ export default {
 }
 .logo {
     width: 100px;
+    justify-items: center;
 }
 
 .register input, .login input {

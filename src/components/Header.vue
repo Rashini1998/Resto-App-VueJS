@@ -1,39 +1,45 @@
 <template>
-    <div class="nav">
-        <router-link to="/">Home</router-link>
-        <router-link to="/add">Add Restaurant</router-link>
-        <router-link to="/update">Update Restaurant</router-link>
-        <a v-on:click="logout" href="#">Logout</a>
-    </div>
+    <nav class="bg-fuchsia-900 border-fuchsia-900">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="../assets/resturant-logo-trans.png" class="h-8" alt="Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Resto</span>
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <button v-on:click="logout" type="button"
+                    class="text-white bg-fuchsia-700 border-slate-50 hover:bg-fuchsia-500 hover:text-fuchsia-900 focus:ring-2  focus:ring-fuchsia-300 font-medium rounded-lg text-sm px-4 py-2 text-center ">Logout</button>
+                <button type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-cta" aria-expanded="false">
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                <ul
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-fuchsia-900">
+                    <router-link to="/"
+                        class="block text-slate-50 py-2 px-3 md:p-0 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-fuchsia-400 md:dark:hover:text-fuchsia-400">Home</router-link>
+                    <router-link to="/add"
+                        class="block text-slate-50 block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-fuchsia-400 md:dark:hover:text-fuchsia-400 ">Add
+                        Restaurant</router-link>
+                    <router-link to="/update"
+                        class="block text-slate-50 py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-fuchsia-400 md:dark:hover:text-fuchsia-400  ">Update
+                        Restaurant</router-link>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
 </template>
 <script>
 export default {
     name: "PageHeader",
-    methods:{
-        logout(){
+    methods: {
+        logout() {
             localStorage.clear();
-            this.$router.push({name:"LoginPage"})
-            
+            this.$router.push({ name: "LoginPage" })
+
         }
     }
 }
 </script>
-<style>
-.nav{
-    background-color: purple;
-    overflow: hidden;
-}
-.nav a{
-    float: left;
-    color: aliceblue;
-    padding: 14px 16px;
-    text-align: center;
-    font-size: 17px;
-    text-decoration: none;
-    margin-right: 5px;
-}
-.nav a:hover{
-    background-color: rgb(222, 134, 222);
-    color: purple;
-}
-</style>
+<style></style>
