@@ -8,9 +8,9 @@
         <table class="w-full text-sm text-center rtl:text-right text-gray-500">
             <thead class="text-s text-fuchsia-950 uppercase bg-gray-50">
                 <tr>
-                    <th scope="col" class="column-header">
+                    <!-- <th scope="col" class="column-header">
                         ID
-                    </th>
+                    </th> -->
                     <th scope="col" class="column-header">
                         Name
                     </th>
@@ -24,9 +24,9 @@
             </thead>
             <tbody>
                 <tr class="bg-white border-b" v-for="item in restuarant" :key="item.id">
-                    <th scope="row" class="column-cell font-medium text-gray-900 text-slate-800">
+                    <!-- <th scope="row" class="column-cell font-medium text-gray-900 text-slate-800">
                         {{ item.id }}
-                    </th>
+                    </th> -->
                     <td class="column-cell">
                         {{ item.name }}
                     </td>

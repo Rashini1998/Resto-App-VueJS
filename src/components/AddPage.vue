@@ -19,7 +19,7 @@
         </div>
         <div class="mb-6">
             <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-fuchsia-900">Contact</label>
-            <input type="password" v-model="restuarant.contact" id="contact"
+            <input type="text" v-model="restuarant.contact" id="contact"
                 class="bg-gray-50 border border-gray-300 text-fuchsia-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                 placeholder="Enter Contact Number" required />
         </div>
@@ -34,6 +34,7 @@
 </template>
 <script>
 import PageHeader from './Header.vue';
+import axios from 'axios';
 export default
     {
         name: "AddPage",
@@ -51,9 +52,18 @@ export default
 
         },
         methods:{
-            addResto(){
+            async addResto(){
                 console.log(this.restuarant);
-                
+                const result = await axios.post("http://localhost:3000/restuarant",{
+                    name:this.restuarant.name,
+                    address:this.restuarant.address,
+                    contact:this.restuarant.contact
+                });
+                if(result.status==201)
+                {
+                    this.$router.push({name:'HomePage'})
+                }
+                console.warn(result);
             }
         },
         mounted() {
