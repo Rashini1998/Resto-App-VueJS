@@ -6,7 +6,7 @@
 
     <div class="relative overflow-x-auto px-8">
         <table class="w-full text-sm text-center rtl:text-right text-gray-500">
-            <thead class="text-xs text-fuchsia-950 uppercase bg-gray-50">
+            <thead class="text-s text-fuchsia-950 uppercase bg-gray-50">
                 <tr>
                     <th scope="col" class="column-header">
                         ID

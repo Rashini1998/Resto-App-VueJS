@@ -30,7 +30,7 @@ export default {
     justify-items: center;
 }
 
-.register input, .login input {
+.register input, .login input, .addResto input {
     width: 300px;
     height: 40px;
     padding-left: 20px;
@@ -41,12 +41,14 @@ export default {
     border: 1px solid purple;
 }
 
-.register button, .login button {
+.register button, .login button, .addResto button {
     width: 320px;
     height: 40px;
     border: 1px solid purple;
     color: white;
     background: purple;
     cursor: pointer;
+    font-size: 14px;
+    text-align: center;
 }
 </style>
