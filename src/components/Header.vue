@@ -21,9 +21,9 @@
                     <router-link to="/add"
                         class="block text-slate-50 block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-fuchsia-400 md:dark:hover:text-fuchsia-400 ">Add
                         Restaurant</router-link>
-                    <router-link to="/update"
+                    <!-- <router-link to="/update"
                         class="block text-slate-50 py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-fuchsia-400 md:dark:hover:text-fuchsia-400  ">Update
-                        Restaurant</router-link>
+                        Restaurant</router-link> -->
                 </ul>
             </div>
         </div>

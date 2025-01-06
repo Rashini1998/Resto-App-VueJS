@@ -20,6 +20,9 @@
                     <th scope="col" class="column-header">
                         Address
                     </th>
+                    <th scope="col" class="column-header">
+                        Actions
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -35,6 +38,10 @@
                     </td>
                     <td class="column-cell">
                         {{ item.address }}
+                    </td>
+                    <td class="column-cell">
+                        <router-link :to="'/update/'+item.id"  class="text-green-600">Update</router-link>
+                      
                     </td>
                 </tr>
             </tbody>
