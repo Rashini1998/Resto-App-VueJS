@@ -24,7 +24,7 @@
                 placeholder="Enter Contact Number" required />
         </div>
         <div class="mb-6">
-            <button type="button" v-on:click="addResto"
+            <button type="button" v-on:click="updateResto"
                 class="text-white bg-fuchsia-950 hover:bg-fuchsia-800 focus:ring-1 focus:outline-none focus:ring-purple-800 dark:focus:ring-purple-800 font-medium rounded-lg text-xs px-3 py-1.5 text-center me-2 mb-2"
                 style="width: 300px;">Update Restuarant</button>
 
@@ -50,6 +50,19 @@ import axios from 'axios';
                 }
             }
 
+        },
+        methods:{
+            async updateResto(){
+                const result = await axios.put("http://localhost:3000/restuarant/"+this.$route.params.id,{
+                    name:this.restuarant.name,
+                    address:this.restuarant.address,
+                    contact:this.restuarant.contact
+                });
+                if(result.status==200)
+                {
+                    this.$router.push({name:'HomePage'})
+                }
+            }
         },
        async mounted()
         {
